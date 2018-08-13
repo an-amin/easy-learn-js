@@ -1,0 +1,388 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="shortcut icon" href="../__/img/js.png" />
+	<link rel="stylesheet" href="../__/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="../__/prism/prism.css" />
+	<link rel="stylesheet" href="../__/css/style.css" />
+	<style>
+		table#string td{padding:5px 10px;border:1px solid black;font-family:Times New Roman;text-align:center;}
+		table#string tr:first-child td,table#string tr:last-child td{font-family:consolas;background:silver;}
+	</style>
+</head>
+<body>
+
+
+<div class="container">
+
+	<section>
+		<hr>
+		<h2>String Reference</h2>
+		<hr>
+		<p>A JavaScript string stores a series of characters like "John Doe".</p>
+		<p>স্ট্রিং বর্ণ দ্বারা গঠিত তথ্য ধারণ করে। যেমন: 'a b c d', 'Hello", 'অ আ ক খ', 'বাংলাদেশ' ইত্যাদি।</p>
+		<blockquote class="blockquote">
+			<i>JavaScript</i> supports Unicode Characters. So obiviously you'll get enough advantage when you're making muli-lingual application.
+		</blockquote>
+		<blockquote class="blockquote blockquote-reverse">
+			*উল্লেখ্য <i>জাভাস্ক্রিপ্ট</i>  ইউনিকোড ক্যারেক্টার সমর্থন করে। তাই আপনি যদি একাধিক ভাষা সাপোর্ট সহ এপ্লিকেশন তৈরি করতে চান তাহলে আনন্দে সিটি, আর তালিয়া আর বগল বাজাতেই পারেন ;)
+		</blockquote>
+	</section>
+
+	
+	
+	
+	<section>
+		<hr>
+		<h2>String</h2>
+		<hr>
+		<p>
+			A string can be any text inside double or single quotes:
+		</p>
+<div class="row IDE">
+<xmp>
+<script>
+	var firstName = "John";
+	var lastName = 'Doe';
+</script>
+</xmp>
+<pre class="PRISM line-numbers"><code class="language-html language-js"></code></pre>
+<div class="row-fluid console"></div>
+</div>
+		<p>
+			Strings can also be created using the String global object directly:
+		</p>
+<div class="row IDE">
+<xmp>
+<script>
+	var str = new String('Ding dong bell...');
+	document.write(str);
+</script>
+</xmp>
+<pre class="PRISM line-numbers"><code class="language-html language-js"></code></pre>
+<div class="row-fluid console"></div>
+</div>
+
+	
+		
+		<h3>Join different strings</h3>
+		<p></p>
+<div class="row IDE">
+<xmp>
+<script>
+	var str1 = "The cow";
+	var str2 = "four footed";
+	var str3 = str1+" is a "+str2+" domestic animal";
+	document.write(str3);
+</script>
+</xmp>
+<pre class="PRISM line-numbers"><code class="language-html language-js"></code></pre>
+<div class="row-fluid console"></div>
+</div>
+	
+	
+	<h3>Template literals</h3>
+	<p>
+		string literals can also be so-called Template literals:
+	</p>
+<div class="row IDE">
+<xmp>
+<script>
+	var title = "google";
+	var link = "http://google.com";
+	var anchor = `<a href="${link}">${title}</a>`;
+	document.write(anchor);
+	
+	var title1 = 'facebook';
+	var link1 = 'http://facebook.com';
+	var title2 = 'twitter';
+	var link2 = 'http://twitter.com';
+	var title3 = 'skype';
+	var link3 = 'http://skype.com';
+	var list = `
+		<ul>
+			<li><a href="${link1}">${title1}</a></li>
+			<li><a href="${link2}">${title2}</a></li>
+			<li><a href="${link3}">${title3}</a></li>
+		</ul>
+	`;
+	document.write(list);
+</script>
+</xmp>
+<pre class="PRISM line-numbers"><code class="language-html language-js"></code></pre>
+<div class="row-fluid console"></div>
+</div>
+
+
+
+		<h3>Long literal strings</h3>
+		<p>Sometimes, your code will include strings which are very long. Rather than having lines that go on endlessly, or wrap at the whim of your editor, you may wish to specifically break the string into multiple lines in the source code without affecting the actual string contents. There are two ways you can do this.</p>
+		<p>You can use the + operator to append multiple strings together, like this:</p>
+<div class="row IDE">
+<xmp>
+<script>
+let longString = "This is a very long string which needs " +
+                 "to wrap across multiple lines because " +
+                 "otherwise my code is unreadable.";
+document.write(longString);
+</script>
+</xmp>
+<pre class="PRISM line-numbers"><code class="language-html language-js"></code></pre>
+<div class="row-fluid console"></div>
+</div>
+	
+		<p>Or you can use the backslash character ("\") at the end of each line to indicate that the string will continue on the next line. Make sure there is no space or any other character after the backslash (except for a line break), or as an indent; otherwise it will not work. That form looks like this:</p>
+<div class="row IDE">
+<xmp>
+<script>
+let longString = "This is a very long string which needs \
+to wrap across multiple lines because \
+otherwise my code is unreadable.";
+document.write(longString);
+</script>
+</xmp>
+<pre class="PRISM line-numbers"><code class="language-html language-js"></code></pre>
+<div class="row-fluid console"></div>
+</div>
+	
+
+	</section>
+	
+	
+	
+	<section>
+
+		<hr>
+		<h2>Escape notation</h2>
+		<hr>
+		<p>
+			Beside regular, printable characters, special characters can be encoded using escape notation:
+		</p>
+		<table class="table table-hover table-bordered">
+			<tr>
+				<th>Code</th>
+				<th>Output</th>
+			</tr>
+			<tr>
+				<td><code>\0</code></td>
+				<td>the NULL character</td>
+			</tr>
+			<tr>
+				<td><code>\'</code></td>
+				<td>single quote</td>
+			</tr>
+			<tr>
+				<td><code>\"</code></td>
+				<td>double quote</td>
+			</tr>
+			<tr>
+				<td><code>\\</code></td>
+				<td>backslash</td>
+			</tr>
+			<tr>
+				<td><code>\n</code></td>
+				<td>new line</td>
+			</tr>
+			<tr>
+				<td><code>\r</code></td>
+				<td>carriage return</td>
+			</tr>
+			<tr>
+				<td><code>\v</code></td>
+				<td>vertical tab</td>
+			</tr>
+			<tr>
+				<td><code>\t</code></td>
+				<td>tab</td>
+			</tr>
+			<tr>
+				<td><code>\b</code></td>
+				<td>backspace</td>
+			</tr>
+			<tr>
+				<td><code>\f</code></td>
+				<td>form feed</td>
+			</tr>
+			<tr>
+				<td><code>\uxxxx</code></td>
+				<td>unicode codepoint</td>
+			</tr>
+			<tr>
+				<td><code>\u{x}... \u{xxxxx}</code></td>
+				<td>unicode codepoint </td>
+			</tr>
+			<tr>
+				<td><code>\xxx</code></td>
+				<td>the Latin-1 character</td>
+			</tr>
+		</table>
+		
+<div class="row IDE">
+<xmp>
+<script>
+	var str;
+	str = "Hello, I have a question.";
+	console.log(str);
+	str = 'Hello, \n I have a question.';
+	console.log(str);
+	str = "He told me,\"Come here\".";
+	document.write(str);
+</script>
+</xmp>
+<pre class="PRISM line-numbers"><code class="language-html language-js"></code></pre>
+<div class="row-fluid console"></div>
+</div>
+	
+	</section>
+	
+	
+	
+
+	<section>
+		<hr>
+		<h2>Character access</h2>
+		<hr>
+		Let, a string "I love you.", it's character position are described in the following table:
+		<table id="string">
+			<tr>
+				<td>Straight count</td>
+				<td>0</td>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+				<td>4</td>
+				<td>5</td>
+				<td>6</td>
+				<td>7</td>
+				<td>8</td>
+				<td>9</td>
+				<td>10</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>I</td>
+				<td> </td>
+				<td>l</td>
+				<td>o</td>
+				<td>v</td>
+				<td>e</td>
+				<td> </td>
+				<td>y</td>
+				<td>o</td>
+				<td>u</td>
+				<td>.</td>
+			</tr>
+			<tr>
+				<td>Inverse Count</td>
+				<td>-11</td>
+				<td>-10</td>
+				<td>-9</td>
+				<td>-8</td>
+				<td>-7</td>
+				<td>-6</td>
+				<td>-5</td>
+				<td>-4</td>
+				<td>-3</td>
+				<td>-2</td>
+				<td>-1</td>
+			</tr>
+		</table>
+		<br>
+		<p>There are two ways to access an individual character in a string. The first is the <code>charAt()</code> method:</p>
+<div class="row IDE">
+<xmp>
+<script>
+	var girl = "Jessica";
+	document.write(girl.charAt(4)); // prints 'i'
+</script>
+</xmp>
+<pre class="PRISM line-numbers"><code class="language-html language-js"></code></pre>
+<div class="row-fluid console"></div>
+</div>
+		<p>The other way is to treat the string as an array-like object, where individual characters correspond to a numerical index:</p>
+<div class="row IDE">
+<xmp>
+<script>
+	var girl = "Jessica";
+	document.write(girl[4]); // prints 'i'
+</script>
+</xmp>
+<pre class="PRISM line-numbers"><code class="language-html language-js"></code></pre>
+<div class="row-fluid console"></div>
+</div>
+	</section>
+	
+	<blockquote class="blockquote">
+		a <i>JavaScript</i> string is also an object. To access it's property/method we'll use 'Dot' (<code>.</code>) & call the property/method.
+		<br>
+		<code>'string'.property</code>
+		<br>
+		<code>'string'.method()</code>
+	</blockquote>
+	
+	<blockquote class="blockquote blockquote-reverse">
+		জাভাস্ক্রিপ্ট স্ট্রিং হচ্ছে একটি অবজেক্ট। এর প্রোপার্টি এবং মেথড-এ অ্যাক্সেস করতে হলে 'ডট' (<code>.</code>)-এর পর সেই প্রোপার্টি/মেথড কল করতে হয় । 
+		<br>
+		<code>'স্ট্রিং'.property</code>
+		<br>
+		<code>'স্ট্রিং'.method()</code>
+	</blockquote>
+	
+	<section> 
+		<hr>
+		<h2>Counting string length</h2>
+		<hr>
+		<p></p>
+<div class="row IDE">
+<xmp>
+<script>
+	var str = 'Hello world';
+	document.write(str.length);
+</script>
+</xmp>
+<pre class="PRISM line-numbers"><code class="language-html language-js"></code></pre>
+<div class="row-fluid console"></div>
+</div>
+	</section>
+	
+	
+	
+</div> <!--.container-->
+
+
+<footer class="container">
+	<nav></nav>
+</footer>
+	
+
+
+<script src="../__/js/jquery.min.js"></script>
+<script src="../__/js/bootstrap.min.js"></script>
+
+<script>
+$(document).ready(function(){
+
+	$navs = {
+		previous:{
+			title:'Data Structures',
+			href:'08.data_structures.html'
+		},
+		next:{
+			title:'String Functions',
+			href:'08B.string_func.html'
+		},
+		index:'08A'
+	};
+	
+});
+</script>
+
+<script src="../__/js/script.js"></script>
+<script src="../__/prism/prism.js"></script>
+
+</body>
+</html>
+</body>
+</html>

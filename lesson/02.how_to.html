@@ -1,0 +1,239 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>JS: How To</title>
+	<link rel="shortcut icon" href="../__/img/js.png" />
+	<link rel="stylesheet" href="../__/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="../__/prism/prism.css" />
+	<link rel="stylesheet" href="../__/css/style.css" />
+</head>
+<body>
+
+<div class="container">
+
+	<section>
+		<hr>
+		<h2>How to install <i>JavaScript</i>?</h2>
+		<hr>
+		<p>
+			You don't need to install <i>JavaScript</i>. It comes pre-installed with browsers :) 
+		</p>
+	</section>
+
+
+	<section>
+		<hr>
+		<h2>What's needed to start coding?</h2>
+		<hr>
+		all that you'll need...
+		<ul>
+			<li>Of course a COMPUTER ;)</li>
+			<li>A Web Browser <small>(latest update version as possible)</small></li>
+			<li>Text Editor/IDE <small>(notepad/ <a target="_blank" href="https://notepad-plus-plus.org/">notepad++</a>/ <a href="">SublimeText</a>/ any you like)</small></li>
+			<li>Will and time in hand... ;)</li>
+		</ul>
+	</section>
+
+
+
+	<section>
+		<hr>
+		<h2>How to write <i>JavaScript</i>?</h2>
+		<hr>
+		
+		<section>
+			<h3>in HTML document</h3>
+			<ol>
+				<li>
+					to write <i>JavaScript</i> in HTML we must use <code>&lt;script&gt;</code> tags. Code goes in between <code>&lt;script&gt;</code>&nbsp;<code>&lt;/script&gt;</code> tags.
+<div class="row IDE">
+<div class="col-sm-12 console"></div>
+<xmp>
+<script>
+	document.write("Hello from JavaScript.");
+	//other codes;
+</script>
+</xmp>
+<pre class="PRISM line-numbers"><code class="language-html language-js"></code></pre>
+</div>
+				</li>
+				
+				<li>
+					<code>&lt;script&gt;</code> tags can be placed anywhere in HTML document, but usually it is written in <code>&lt;head&gt;</code> and <code>&lt;body&gt;</code>
+<div class="row IDE">
+<div class="col-sm-12 console"></div>
+<xmp>
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript</title>
+	<script>
+		//JavaScript Codes;
+	</script>
+</head>
+<body>
+	<h1>Title</h1>
+	<p>paragraph</p>
+	
+	
+	<script>
+		//JavaScript Codes;
+	</script>
+</body>
+</html>
+</xmp>
+<pre class="PRISM line-numbers"><code class="language-html language-js"></code></pre>
+</div>
+				</li>
+				<li>the best practice to place <code>&lt;script&gt;</code> tags in HTML is to place it as lower as possible in the <code>&lt;body&gt;</code>  tags, so that all the elements the document are surely loaded & <i>JavaScript</i> can access them & runs the application  flawlessly.</li>
+			</ol>
+		</section>
+		
+		
+		<section> 
+		<h3>Inline with HTML tag</h3>
+		<ol>
+			<li>
+				we can also write inline <i>JavaScript</i> in <b>HTML event attributes</b> like: <i>onclick</i>, <i>onmouseover</i>, <i>onmouseout</i>, <ib>onload</i> etc....
+<div class="row IDE">
+<div class="col-sm-12 console"></div>
+<xmp>
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+
+	<button onclick="this.innerHTML=Date();">click to show date & time</button>
+	<br>
+	[Date & Time will be shown on THIS element]
+
+	<br><br>
+
+	[Play with Mouse]
+	<br>
+	
+	<button 
+		onclick="this.innerHTML='Clicked';" 
+		onmouseover="this.innerHTML='Mouse In';" 
+		onmouseout="this.innerHTML='Mouse Out';"
+	>
+		Move Mouse Around Here
+	</button>
+
+</body>
+</html>
+</xmp>
+<pre class="PRISM line-numbers"><code class="language-html language-js"></code></pre>
+</div>
+			</li>
+		</ol>
+		</section>
+		
+		
+		<section> 
+			<hr>
+			<h3>in external file</h3>
+			<hr>
+			<ol>
+				<li>we can write <i>JavaScript</i> in an external file, and link it into HTML in <code>&lt;head&gt;</code> and <code>&lt;body&gt;</code> tags wherever need.</li>
+				<li><i>JavaScript</i> file format is <code>.js</code> and we don't need to write <code>&lt;script&gt;</code> tag in this file. <br> <code>&lt;script <span style="color:red;">src=</span>"<i style="color:skyblue;">file_name.js</i>"&gt;</code>&nbsp;<code>&lt;/script&gt;</code> <br> we cannot write anything between this <code>&lt;script&gt;</code> tags. If we need any we'll write new <code>&lt;script&gt;</code> tags.</li>
+				<li>the best practice to link an extarnal <code>.js</code> file is lower as possible in the <code>&lt;body&gt;</code> tag for the very same reason described earlier.</li>
+				<li>
+					follow the example bellow:
+					<br>
+					HTML file <code>index.html</code>
+<div class="row IDE">
+<xmp>
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>External JavaScript</title>
+</head>
+<body>
+	<h1>External JavaScript</h1>
+	
+	<script src="code.js"></script>
+</body>
+</html>
+</xmp>
+<pre class="PRISM line-numbers"><code class="language-html"></code></pre>
+</div>
+					<br>
+					<i>JavaScript</i> file <code>code.js</code>
+<div class="row IDE">
+<xmp>
+document.write("Hello from JavaScript.");
+//other codes;
+</xmp>
+<pre class="PRISM line-numbers"><code class="language-js"></code></pre>
+</div>
+				</li>
+			</ol>
+		</section>
+		
+		<section> 
+			<h3>Debug in Console</h3>
+			<ol>
+				<li>we can debug <i>JavaScript</i> codes in Browser Console</li>
+				<li>To open <code>Console</code> press <kbd>F12</kbd> key</li>
+				<li>or, <code>'right click' > Inspect > Console</code></code></li></li>
+				<li>
+					open <code>Console</code> and input the following code...
+<div class="row IDE">
+<div class="col-sm-12 console"></div>
+<xmp>
+1+2+3+4;
+</xmp>
+<pre class="PRISM line-numbers"><code class="language-js"></code></pre>
+</div>
+				</li>
+			</ol>
+		</section>
+		
+		
+	</section>
+
+
+
+
+</div>
+
+
+<footer class="container">
+	<nav></nav>
+</footer>
+	
+
+
+<script src="../__/js/jquery.min.js"></script>
+<script src="../__/js/bootstrap.min.js"></script>
+
+<script>
+$(document).ready(function(){
+
+	$navs = {
+		previous:{
+			title:'About',
+			href:'01.about.html'
+		},
+		next:{
+			title:'First Program',
+			href:'03.first_program.html'
+		},
+		index:'02'
+	};
+	
+});
+</script>
+
+<script src="../__/js/script.js"></script>
+<script src="../__/prism/prism.js"></script>
+
+</body>
+</html>

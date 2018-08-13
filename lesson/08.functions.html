@@ -1,0 +1,294 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>JS: Functions</title>
+	<link rel="shortcut icon" href="../__/img/js.png" />
+	<link rel="stylesheet" href="../__/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="../__/prism/prism.css" />
+	<link rel="stylesheet" href="../__/css/style.css" />
+</head>
+<body>
+
+
+<div class="container">
+
+
+
+	<section>
+		<hr>
+		<h2>Functions</h2>
+		<hr>
+		<p>
+			Function is a block of code written to perform a particular task.
+			<br>Function is executed when it is called.
+		</p>
+		<p>
+			ফাংশন হচ্ছে কিছু কোডের একটি ব্লক যা কোনও একটি নির্দিষ্ট কাজ সম্পাদন করে। 
+			<br>ফাংশন তহনই কাজ করে যখন একে কল করা হয়। 
+		</p>
+<div class="row IDE">
+<xmp>
+<script>
+	//writting a function
+	function greetMe(){
+	var txt = "Hello, welcome to JavaScript function!"
+		document.write(txt);
+	}
+	
+	//calling the function to work
+	greetMe();
+</script>
+</xmp>
+<pre class="PRISM line-numbers"><code class="language-html language-js"></code></pre>
+<div class="row-fluid console"></div>
+</div>
+	</section>
+	
+
+	
+	<section> 
+		<hr>
+		<h2>Function Invocation</h2>
+		<hr>
+		<p>The code inside the function will execute when "something" invokes (calls) the function:</p>
+		<ul>
+			<li>When an event occurs (when a user clicks a button)</li>
+			<li>When it is invoked (called) from JavaScript code</li>
+			<li>Automatically (self invoked)</li>
+		</ul>
+	</section>
+	
+	
+	
+	<section>
+		<hr>
+		<h2>Function Parameters</h2>
+		<hr>
+		<p>
+			//
+		</p>
+<div class="row IDE">
+<xmp>
+<script>
+	function greetCustommer(customerName){
+		var msg = "Hello, <b>"+customerName+"</b>, welcome to our restaurant.";
+		document.write(msg);
+	}
+	
+	greetCustommer("Mr. Donald Trump");
+</script>
+</xmp>
+<pre class="PRISM line-numbers"><code class="language-html language-js"></code></pre>
+<div class="row-fluid console"></div>
+</div>
+		<blockquote class="blockquote">
+			if a function required a parameter & it is not passed then the function takes it's value as 'undefined'.
+		</blockquote>
+		<blockquote class="blockquote blockquote-reverse">
+			ফাংশনে রিকুয়ার্ড প্যারামিটার পাস না করলে ফাংশন ঐ প্যারামিটারের ভ্যালু undefined হিসেবে ট্রিট করে
+		</blockquote>
+<div class="row IDE">
+<xmp>
+<script>
+	function greetCustommer(customerName){
+		var msg = "Hello, <b>"+customerName+"</b>, welcome to our restaurant.";
+		document.write(msg);
+	}
+	
+	greetCustommer();
+</script>
+</xmp>
+<pre class="PRISM line-numbers"><code class="language-html language-js"></code></pre>
+<div class="row-fluid console"></div>
+</div>
+
+		<blockquote class="blockquote">
+			we can set dafault value for parameters. if parameter value is not passed when the function is called, it will take default value.
+		</blockquote>
+		<blockquote class="blockquote blockquote-reverse">
+			ফাংশনে প্যারামিটারের ডিফল্ট ভ্যালু সেট করা যায়। তাহলে ফাংশন কল করার সময় প্যারামিটারের ভ্যালু দেয়া না হলে ডিফল্ট ভ্যালু নিবে। 
+		</blockquote>
+<div class="row IDE">
+<xmp>
+<script>
+	function greetCustommer(customerName='Mr. & Mrs. Smith'){
+		var msg = "Hello, <b>"+customerName+,"</b> welcome to our restaurant.";
+		document.write(msg);
+	}
+	
+	greetCustommer();
+</script>
+</xmp>
+<pre class="PRISM line-numbers"><code class="language-html language-js"></code></pre>
+<div class="row-fluid console"></div>
+</div>
+
+	</section>
+	
+	
+	
+	<section>
+		<hr>
+		<h2>Function Return</h2>
+		<hr>
+		
+		<blockquote class="blockquote">
+			we can return a value in a function. If we don't by default function returns 'undefined'.
+		</blockquote>
+		<blockquote class="blockquote blockquote-reverse">
+			ফাংশনে আমরা কোনও ভ্যালু রিটার্ন করতে পারি। যদি না'ও করই তাহলে বাই ডিফল্ট ফাংশন 'undefined' ভ্যালু রিটার্ন করে। 
+		</blockquote>
+<div class="row IDE">
+<xmp>
+<script>
+	function addTwoNumbers(numb1,numb2){
+		return numb1 + numb2;
+	}
+	
+	function addThreeNumbers(numb1,numb2,numb3){
+		numb1 + numb2 + numb3;
+	}
+	
+	document.write(addTwoNumbers(7,5),'<br>');
+	//here, addTwoNumbers() returns the sum of the two parameters
+	
+	document.write(addThreeNumbers(7,5,9),'<br>');
+	//here, addTwoNumbers() returns 'undefined'
+</script>
+</xmp>
+<pre class="PRISM line-numbers"><code class="language-html language-js"></code></pre>
+<div class="row-fluid console"></div>
+</div>
+
+	<blockquote class="blockquote">
+		 when we're returning something that means the function work is done & it returns the vaule & immediately stops execution of next statements (if any).
+	</blockquote>
+	<blockquote class="blockquote blockquote-reverse">
+		 ফাংশনে যদি কোনও ভ্যালু রিটার্ন করা হয় তাহলে ধরা হয় যে ফাংশনের কাজ শেষ, এবং ফাংশন ভ্যালু রিটার্ন করে পরবর্তী স্টেটমেন্ট (যদি থাকে) এক্সিকিউট করে না। 
+	</blockquote>
+<div class="row IDE">
+<xmp>
+<script>
+	function calculate(numb1,numb2){
+		return numb1 * numb2; //function is done here. so next statement will not be executed
+		return numb1 / numb2; //this & next statements (if any) will not be executed.
+	}
+	document.write(calculate(15,5));
+</script>
+</xmp>
+<pre class="PRISM line-numbers"><code class="language-html language-js"></code></pre>
+<div class="row-fluid console"></div>
+</div>
+
+	<blockquote class="blockquote">
+		We can return something only once from a function. If we need more... we'll return them in a Object/Array.<br>
+		<small>we'll learn about Array & Object soon**</small>
+	</blockquote>
+	<blockquote class="blockquote blockquote-reverse">
+		একটি ফাংশন থেকে কোন কিছু একবারই রিটার্ন করা যায়। যদি একাধিক মান/ভ্যালু রিটার্ন করতে হয় তাহলে অবজেক্ট/অ্যারে হিসেবে রিটার্ন করতে হয়। <br>
+		<small>শীঘ্রই আমরা অবজেক্ট এবং অ্যারে সম্পর্কে শিখবো**</small>
+	</blockquote>
+<div class="row IDE">
+<xmp>
+<script>
+	function calculate(numb1,numb2){
+		var obj = {
+			addition:numb1+numb2,
+			substraction:numb1-numb2,
+			multiplication:numb1*numb2,
+			divition:numb1/numb2
+		}; 
+		return obj;
+	}
+	console.log(calculate(15,5));
+	document.write(calculate(15,5),'<br> press F12 to open console');
+</script>
+</xmp>
+<pre class="PRISM line-numbers"><code class="language-html language-js"></code></pre>
+<div class="row-fluid console"></div>
+</div>
+
+	<blockquote class="blockquote">
+		We can set a function's returned value to a variable and use it anywhere.
+	</blockquote>
+	<blockquote class="blockquote blockquote-reverse">
+		ফাংশন থেকে প্রাপ্ত (রিটার্নড) ভ্যালু আমরা ভ্যারিয়েবলে সেট করে রেখে সেই মান ব্যবহার করতে পারি।
+	</blockquote>
+<div class="row IDE">
+<xmp>
+<script>
+	function difference(numb1,numb2){
+		return numb1 - numb2;
+	}
+	var x = difference(10,6);
+	document.write('difference is ',x);
+</script>
+</xmp>
+<pre class="PRISM line-numbers"><code class="language-html language-js"></code></pre>
+<div class="row-fluid console"></div>
+</div>
+
+	</section>
+	
+	
+	
+	<section>
+		<hr>
+		<h2>Why Functions?</h2>
+		<hr>
+		<p>
+			//
+		</p>
+<div class="row IDE">
+<xmp>
+<script>
+	//
+</script>
+</xmp>
+<pre class="PRISM line-numbers"><code class="language-html language-js"></code></pre>
+<div class="row-fluid console"></div>
+</div>
+
+	</section>
+	
+	
+	
+	
+</div> <!--.container-->
+
+
+<footer class="container">
+	<nav></nav>
+</footer>
+	
+
+
+<script src="../__/js/jquery.min.js"></script>
+<script src="../__/js/bootstrap.min.js"></script>
+
+<script>
+$(document).ready(function(){
+
+	$navs = {
+		previous:{
+			title:'Variables',
+			href:'07.variables.html'
+		},
+		next:{
+			title:'Data Structures',
+			href:'09.data_structures.html'
+		},
+		index:'08'
+	};
+	
+});
+</script>
+
+<script src="../__/js/script.js"></script>
+<script src="../__/prism/prism.js"></script>
+
+</body>
+</html>
+</body>
+</html>

@@ -1,0 +1,327 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>JS: Numbers</title>
+	<link rel="shortcut icon" href="../__/img/js.png" />
+	<link rel="stylesheet" href="../__/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="../__/prism/prism.css" />
+	<link rel="stylesheet" href="../__/css/style.css" />
+</head>
+<body>
+
+
+<div class="container">
+
+	<section>
+		<hr>
+		<h2>JavaScript Numbers</h2>
+		<hr>
+		<p>
+			JavaScript has only one type of number. Numbers can be written with, or without, decimals.
+		</p>
+<div class="row IDE">
+<xmp>
+<script>
+	var x = 31.45; // A number with decimals
+	var y = 28; // A number without decimals
+</script>
+</xmp>
+<pre class="PRISM line-numbers"><code class="language-html language-js"></code></pre>
+<div class="row-fluid console"></div>
+</div>
+
+		<p>
+			Extra large or extra small numbers can be written with scientific (exponent) notation:
+		</p>
+<div class="row IDE">
+<xmp>
+<script>
+	var x = 12e2; //12*10^2
+	var y = 123e5; //123*10^5
+</script>
+</xmp>
+<pre class="PRISM line-numbers"><code class="language-html language-js"></code></pre>
+<div class="row-fluid console"></div>
+</div>
+
+		<h4>get type of number</h4>
+<div class="row IDE">
+<xmp>
+<script>
+	var x = 12; //12*10^2
+	var y = 123e5; //123*10^5
+	document.write(typeof x,'<br>');
+	document.write(typeof y,'<br>');
+</script>
+</xmp>
+<pre class="PRISM line-numbers"><code class="language-html language-js"></code></pre>
+<div class="row-fluid console"></div>
+</div>
+
+		<h3>Precision</h3>
+		<p>
+			Integers are considered accurate up to 15 digits.
+		</p>
+<div class="row IDE">
+<xmp>
+<script>
+	var x = 999999999999999;   // x will be 999999999999999
+	var y = 9999999999999999;  // y will be 10000000000000000
+	document.write(x,'<br>');
+	document.write(y,'<br>');
+</script>
+</xmp>
+<pre class="PRISM line-numbers"><code class="language-html language-js"></code></pre>
+<div class="row-fluid console"></div>
+</div>
+
+		<p>
+			The maximum number of decimals is 17, but floating point arithmetic is not always 100% accurate:
+		</p>
+<div class="row IDE">
+<xmp>
+<script>
+	var x = 0.2 + 0.1;         // x will be 0.30000000000000004
+	document.write(x);
+</script>
+</xmp>
+<pre class="PRISM line-numbers"><code class="language-html language-js"></code></pre>
+<div class="row-fluid console"></div>
+</div>
+
+		<p>
+			To solve the problem above, it helps to multiply and divide:
+		</p>
+<div class="row IDE">
+<xmp>
+<script>
+	var x = (0.2 * 10 + 0.1 * 10) / 10;       // x will be 0.3
+	document.write(x);
+</script>
+</xmp>
+<pre class="PRISM line-numbers"><code class="language-html language-js"></code></pre>
+<div class="row-fluid console"></div>
+</div>
+		
+		<h3>Number & String operations</h3>
+		<p></p>
+<div class="row IDE">
+<xmp>
+<script>
+	var x = 3+5+'Apple';
+	document.write(x);
+</script>
+</xmp>
+<pre class="PRISM line-numbers"><code class="language-html language-js"></code></pre>
+<div class="row-fluid console"></div>
+</div>
+
+		<p></p>
+<div class="row IDE">
+<xmp>
+<script>
+	var x = 'Apple'+3+5;
+	document.write(x);
+</script>
+</xmp>
+<pre class="PRISM line-numbers"><code class="language-html language-js"></code></pre>
+<div class="row-fluid console"></div>
+</div>
+
+		
+		<p>if the string contains a numeric value , the result will be a number:</p>
+<div class="row IDE">
+<xmp>
+<script>
+	var p = 15/'3';
+	var q = 15*'3';
+	var r = 15+'3';//only this will be concated
+	var s = 15-'3';
+	document.write(p,'<br>');
+	document.write(q,'<br>');
+	document.write(r,' concated <br>');
+	document.write(s,'<br>');
+</script>
+</xmp>
+<pre class="PRISM line-numbers"><code class="language-html language-js"></code></pre>
+<div class="row-fluid console"></div>
+</div>
+
+
+		<h3>NaN (Not a Number)</h3>
+		<p>NaN is a JavaScript reserved word indicating that a number is not a legal number.</p>
+		<p>Trying to do arithmetic with a non-numeric string will result in NaN (Not a Number):</p>
+<div class="row IDE">
+<xmp>
+<script>
+	var p = 1-'car';
+	var q = 1+'car'; //only this will be concated
+	var r = 1*'car';
+	var s = 1/'car';
+	document.write(p,'<br>',q,'<br>',r,'<br>',s);
+</script>
+</xmp>
+<pre class="PRISM line-numbers"><code class="language-html language-js"></code></pre>
+<div class="row-fluid console"></div>
+</div>
+
+		<p>type of <code>NaN</code> is number</p>
+<div class="row IDE">
+<xmp>
+<script>
+	document.write(typeof NaN);
+</script>
+</xmp>
+<pre class="PRISM line-numbers"><code class="language-html language-js"></code></pre>
+<div class="row-fluid console"></div>
+</div>
+
+
+		<h4>NaN operations</h4>
+		<p>Mathematical operations with <code>NaN</code> returns <code>NaN</code></p>
+<div class="row IDE">
+<xmp>
+<script>
+	document.write('NaN + NaN = ',NaN+NaN,'<br>');
+	document.write('NaN - NaN = ',NaN-NaN,'<br>');
+	document.write('NaN * NaN = ',NaN*NaN,'<br>');
+	document.write('NaN / NaN = ',NaN/NaN,'<br>');
+	document.write('NaN + 123 = ',NaN+123,'<br>');
+	document.write('NaN - 123 = ',NaN-123,'<br>');
+	document.write('NaN * 123 = ',NaN*123,'<br>');
+	document.write('NaN / 123 = ',NaN/123,'<br>');
+	document.write('NaN / 0 = ',NaN/0,'<br>');
+</script>
+</xmp>
+<pre class="PRISM line-numbers"><code class="language-html language-js"></code></pre>
+<div class="row-fluid console"></div>
+</div>
+
+
+	<h4><code>NaN</code> operation with string</h4>
+<div class="row IDE">
+<xmp>
+<script>
+	var p = NaN + 'string'; //returns (string) NaNstring
+	var q = NaN + 7 + 'string'; //returns (string) NaN7string
+	var r = 'string' + NaN ; //returns (string) stringNaN
+	var s = 3 + '1' + NaN ; //returns (string) 31NaN
+	document.write(p,'<br>',q,'<br>',r,'<br>',s);
+</script>
+</xmp>
+<pre class="PRISM line-numbers"><code class="language-html language-js"></code></pre>
+<div class="row-fluid console"></div>
+</div>
+
+
+		<h3>Infinity</h3>
+		<p>
+			Infinity (or -Infinity) is the value JavaScript will return if you calculate a number outside the largest possible number.
+		</p>
+<div class="row IDE">
+<xmp>
+<script>
+	var x = 1/0;
+	var y = -1/0;
+	document.write(x,'<br>');
+	document.write(y,'<br>');
+</script>
+</xmp>
+<pre class="PRISM line-numbers"><code class="language-html language-js"></code></pre>
+<div class="row-fluid console"></div>
+</div>
+
+		<p>typeof <code>Infinity</code> is number</p>
+<div class="row IDE">
+<xmp>
+<script>
+	document.write(typeof Infinity);
+</script>
+</xmp>
+<pre class="PRISM line-numbers"><code class="language-html language-js"></code></pre>
+<div class="row-fluid console"></div>
+</div>
+
+		<p>Mathematical Operations with <code>Infinity</code></p>
+<div class="row IDE">
+<xmp>
+<script>
+	var p = Infinity + Infinity; //returns Infinity
+	var q = Infinity - Infinity; //returns NaN
+	var r = Infinity * Infinity; //returns Infinity
+	var s = Infinity / Infinity; //return NaN
+	document.write(p,'<br>',q,'<br>',r,'<br>',s);
+</script>
+</xmp>
+<pre class="PRISM line-numbers"><code class="language-html language-js"></code></pre>
+<div class="row-fluid console"></div>
+</div>
+
+		<p>check <code>Infinity</code></p>
+<div class="row IDE">
+<xmp>
+<script>
+	var p = isFinite(1/0);
+	var q = isFinite(1/1);
+	document.write(p,'<br>');
+	document.write(q,'<br>');
+</script>
+</xmp>
+<pre class="PRISM line-numbers"><code class="language-html language-js"></code></pre>
+<div class="row-fluid console"></div>
+</div>
+
+		<p><i>JavaScrip</i> number is object & can be written as:</p>
+<div class="row IDE">
+<xmp>
+<script>
+	var x = new Number(7);
+	document.write(x);
+</script>
+</xmp>
+<pre class="PRISM line-numbers"><code class="language-html language-js"></code></pre>
+<div class="row-fluid console"></div>
+</div>
+
+	
+	</section>
+
+	
+</div> <!--.container-->
+
+
+<footer class="container">
+	<nav></nav>
+</footer>
+	
+
+
+<script src="../__/js/jquery.min.js"></script>
+<script src="../__/js/bootstrap.min.js"></script>
+
+<script>
+$(document).ready(function(){
+
+	$navs = {
+		previous:{
+			title:'Data Structures',
+			href:'09.data_structures.html'
+		},
+		next:{
+			title:'Number Function',
+			href:'09B.number_func.html'
+		},
+		index:'09A'
+	};
+	
+});
+</script>
+
+<script src="../__/js/script.js"></script>
+<script src="../__/prism/prism.js"></script>
+
+</body>
+</html>
+</body>
+</html>

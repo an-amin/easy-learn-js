@@ -1,0 +1,161 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>JS: Variables</title>
+	<link rel="shortcut icon" href="../__/img/js.png" />
+	<link rel="stylesheet" href="../__/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="../__/prism/prism.css" />
+	<link rel="stylesheet" href="../__/css/style.css" />
+</head>
+<body>
+
+<div class="container">
+	<section>
+		<h2>JavaScript Variables</h2>
+		<ul>
+			<li>JavaScript uses the <code>var</code> keyword to declare variables.</li>
+			<li>An <b>equal sign (=)</b> is used to assign values to variables.</li>
+		</ul>
+
+
+		<h3>declare a variable then assign</h3>
+
+<div class="row IDE">
+<div class="col-sm-12 console"></div>
+<xmp>
+<script>
+	var x; // here x is declared but value is undefined	
+	document.write('value of "x" is ',x,'<br>');
+	x = 9; //here x's value is assigned 9
+	document.write('now value of "x" is ',x);
+</script>
+</xmp>
+<pre class="PRISM line-numbers"><code class="language-html language-js"></code></pre>
+</div>
+
+
+
+		<h3>declare & assign variable</h3>
+
+<div class="row IDE">
+<div class="col-sm-12 console"></div>
+<xmp>
+<script>
+	var x = 5; 		//x is defined & value is set to 5
+	var y = 2; 		//y is defined & value is set to 2
+	var z = x + y;	//z is defined & value is set to x+y
+	document.write('sum is',z);
+</script>
+</xmp>
+<pre class="PRISM line-numbers"><code class="language-html language-js"></code></pre>
+</div>
+
+
+		<h3>declaring multiple variables</h3>
+
+<div class="row IDE">
+<div class="col-sm-12 console"></div>
+<xmp>
+<script>
+	var p,q,r,s;
+	p = 5;
+	q = 3;
+	r = 1;
+	s = p + q - r;
+	document.write('result is ',s);
+</script>
+</xmp>
+<pre class="PRISM line-numbers"><code class="language-html language-js"></code></pre>
+</div>
+
+		<h3>declaring & assigning multiple variables at a time</h3>
+
+<div class="row IDE">
+<div class="col-sm-12 console"></div>
+<xmp>
+<script>
+	var x = 5, y = 2, z = 7,a;
+	a = z*y-z;
+	document.write('answer is ',a);
+</script>
+</xmp>
+<pre class="PRISM line-numbers"><code class="language-html language-js"></code></pre>
+</div>
+
+		<h3>variable: valid naming</h3>
+		<table class="table table-hover table-bordered">
+			<tr>
+				<th class="color:green">Valid</th>
+				<th style="color:red">Invalid</th>
+			</tr>
+			<tr>
+				<td>Variable name should be start with letter, underscore or Dolor sign ($)</td>
+				<td>Variable name should not be start with numbers or symbols</td>
+			</tr>
+			<tr>
+				<td><code>var hello1234;</code></td>
+				<td><code>var 1234hello;</code></td>
+			</tr>
+			<tr>
+				<td><code>var _1234, $1234;</code></td>
+				<td><code>var 1234, @1234;</code></td>
+			</tr>
+			<tr>
+				<td><code>var _hello;</code></td>
+				<td><code>var -hello;</code></td>
+			</tr>
+			<tr>
+				<td><code>var $hello;</code></td>
+				<td><code>var #hello;</code></td>
+			</tr>
+			<tr>
+				<td><code>var $,_;</code></td>
+				<td><code>var @,!,#,%,&,*,+,-,/,(,),{,},[,];</code></td>
+			</tr>
+			<tr>
+				<td><code>var α,β,γ,δ,অ, আ, ক, খ; (unicode characters)</code></td>
+				<td><code>var ',",^; (etc..)</code></td>
+			</tr>
+			<tr>
+				<td><code>var heLLo;</code></td>
+				<td><code>var hel lo;</code></td>
+			</tr>
+		</table>
+	</section>
+</div>
+
+
+<footer class="container">
+	<nav></nav>
+</footer>
+	
+
+
+<script src="../__/js/jquery.min.js"></script>
+<script src="../__/js/bootstrap.min.js"></script>
+
+<script>
+$(document).ready(function(){
+
+	$navs = {
+		previous:{
+			title:'Comments',
+			href:'06.comments.html'
+		},
+		next:{
+			title:'Functions',
+			href:'08.functions.html'
+		},
+		index:'07'
+	};
+	
+});
+</script>
+
+<script src="../__/js/script.js"></script>
+<script src="../__/prism/prism.js"></script>
+
+<br><br><br><br>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<button onclick="popup_login()">Login</button>
+<script>
+
+function prompt_uName(t='Username',v=''){
+	var uName = prompt(t,v);
+	if(uName!=null){
+		if(uName.length>=4&&uName.length<=8){
+			//console.log('correct username');
+			return uName;
+		}else{
+			//console.log('invalid username');
+			prompt_uName("username should be 4 to 8 characters");
+		}
+	}
+}
+
+function prompt_uPass(t='Password',v=''){
+	var uPass = prompt(t,v);
+	if(uPass!=null){
+		if(uPass.length>=8&&uPass.length<=16){
+			//console.log('correct password');
+			return uPass;
+		}else{
+			//console.log('invalid password');
+			prompt_uPass("password should be 4 to 8 characters");
+		}
+	}
+}
+
+function  popup_login(t='username',v=''){
+	var uName,password;
+	uName = prompt_uName();
+	if(uName!==undefined){
+		uPass = prompt_uPass();
+		if(uPass!==undefined){
+			console.log('Username : '+uName);	
+			console.log('Password : '+uPass);	
+		}
+	}
+}
+
+</script>	

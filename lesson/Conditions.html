@@ -1,0 +1,170 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Conditions in JavaScript</title>
+</head>
+<body>
+
+
+<h1>Conditions in JavaScript</h1>
+
+<h3>conditional operators</h3>
+<table border="1">
+	<tr>
+		<th>Operator</th>
+		<th>Name & Role</th>
+		<th>Example</th>
+	</tr>
+	<tr>
+		<td>
+			<h1>&nbsp; ==</h1>
+			<br>
+			<small>double equal sign</small>
+		</td>
+		<td>
+			if is equal
+			<br>
+			<small>checks if the values is equal</small>
+		</td>
+		<td>
+			<code>
+				1==1; &nbsp;//returns TRUE <br>
+				1=='1'; &nbsp;//returns TRUE <br>
+				1==2; &nbsp;//returns FALSE <br>
+			</code>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<h1>&nbsp;===</h1>
+			<br>
+			<small>triple equal sign</small>
+		</td>
+		<td>
+			if strickty is equal
+			<br>
+			<small>checks if both the values & types are equal</small>
+		</td>
+		<td>
+			<code>
+				1===1; &nbsp;//returns TRUE <br>
+				1==='1'; &nbsp;//returns FALSE <br>
+				1==2; &nbsp;//returns FALSE <br>
+			</code>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<h1>&nbsp; !=</h1>
+			<br>
+			<small>exclumation & equal sign</small>
+		</td>
+		<td>
+			if is not equal
+			<br>
+			<small>checks if the values is not equal</small>
+		</td>
+		<td>
+			<code>
+				1!=1; &nbsp;//returns FALSE <br>
+				1!='1'; &nbsp;//returns FALSE <br>
+				1!=2; &nbsp;//returns TRUE <br>
+			</code>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<h1>&nbsp; !==</h1>
+			<br>
+			<small>exclumation & double equal sign</small>
+		</td>
+		<td>
+			if strictly is not equal
+			<br>
+			<small>checks if both the values & types are not equal</small>
+		</td>
+		<td>
+			<code>
+				1!==1; &nbsp;//returns FALSE <br>
+				1!=='1'; &nbsp;//returns TRUE <br>
+				1!==2; &nbsp;//returns TRUE <br>
+			</code>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<h1>&nbsp; &&</h1>
+			<br>
+			<small>double ampersand sign</small>
+		</td>
+		<td>
+			Logical AND
+			<br>
+			<small>join two or more conditions, <br> and checks iff each are TRUE</small>
+		</td>
+		<td>
+			<code>
+				(condision1)&&(condition2); <br>
+				in case, all conditions are TRUE, returns TRUE,<br> 
+				in all other cases returns FALSE<br>
+				example: <br>
+				(TRUE)&&(TRUE); &nbsp;//returns TRUE <br>
+				(TRUE)&&(FALSE); &nbsp;//returns FALSE <br>
+				(FALSE)&&(TRUE); &nbsp;//returns FALSE <br>
+				(FALSE)&&(FALSE); &nbsp;//returns FALSE <br>
+				(TRUE)&&(TRUE)&&(FALSE); &nbsp;//returns FALSE <br>
+			</code>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<h1>&nbsp; ||</h1>
+			<br>
+			<small>double pipe sign</small>
+		</td>
+		<td>
+			Logical OR
+			<br>
+			<small>join two or more conditions, <br> and checks if/atleast any any of them are TRUE</small>
+		</td>
+		<td>
+			<code>
+				(condision1)||(condition2); <br>
+				in case, all conditions are FALSE, <br>
+				returns FALSE, <br> 
+				in all other cases returns TRUE<br>
+				example: <br>
+				(FALSE)||(FALSE); &nbsp;//returns FALSE <br>
+				(TRUE)||(FALSE); &nbsp;//returns TRUE <br>
+				(FALSE)||(TRUE); &nbsp;//returns TRUE <br>
+				(FALSE)||(FALSE); &nbsp;//returns TRUE <br>
+				(FALSE)||(TRUE)||(FALSE); &nbsp;//returns TRUE <br>
+			</code>
+		</td>
+	</tr>
+</table>
+
+
+
+<br><br><br><br><br>
+
+
+
+
+
+
+
+
+
+
+<script>
+	//var x = 1!==1?alert("1 equals 1"):alert("1 not equals 1");
+</script>
+
+
+
+
+
+</body>
+</html>

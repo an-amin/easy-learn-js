@@ -1,0 +1,200 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+
+
+<h1>JavaScript Loop</h1>
+<ol>
+	<li>for loop</li>
+	<li>while loop</li>
+	<li>do-while loop</li>
+	<li>forEach loop</li>
+	<li>for in loop</li>
+</ol>
+
+<h3>1. For Loop</h3>
+<code>
+	for( starting_initialise; continue_as_long_as_condition; do_this_each_time )<br>
+	{<br>
+		&nbsp;&nbsp;//some code;<br>
+	}
+	
+	<hr>
+<pre>
+&lt;script&gt;
+	for(i=0; i<10; i++)
+	{
+		console.log(i);
+	}
+&lt;/script&gt;
+</pre>
+</code>
+
+
+<hr><hr>
+
+
+<h3>2. while Loop</h3>
+<code>
+	var initial_value = value;<br>
+	while(condition)<br>
+	{<br>
+		&nbsp;&nbsp;//some code;<br>
+		&nbsp;&nbsp;//math_expression;<br>
+	}
+
+	<hr>
+
+<pre>
+&lt;script&gt;
+	var i=0;
+	while(i<10)
+	{
+		console.log(i);
+		i++;
+	}
+&lt;/script&gt;
+</pre>
+</code>
+
+
+
+
+<hr><hr>
+
+
+<h3>3. do-while Loop</h3>
+<code>
+var initial_value = value;<br>
+do{<br>
+	&nbsp;&nbsp;//some code;<br>
+	&nbsp;&nbsp;//math_expression;<br>
+}<br>
+while(condition)
+
+<hr>
+
+<pre>
+&lt;script&gt;
+	var i=20;
+	do{
+		console.log(i);
+		i++;
+	}
+	while(i<10)
+&lt;/script&gt;
+</pre>
+</code>
+
+
+<hr><hr>
+
+
+<h3>4. forEach Loop</h3>
+<code>
+var array = [elements,...];<br>
+array.forEach(function(element){ <br>
+&nbsp;&nbsp; //some code; <br>
+});
+
+<hr>
+
+<pre>
+&lt;script&gt;
+	var fruits = ["apple", "banana", "cherry", "grapes"];
+	fruits.forEach(function(fruit){
+		console.log("I love "+fruit);
+	});
+&lt;/script&gt;
+</pre>
+
+<hr>
+
+var array = [index=>elements,...];<br>
+array.forEach(function(element,index){ <br>
+&nbsp;&nbsp; //some code; <br>
+});
+
+<hr>
+
+<pre>
+&lt;script&gt;
+	var clients = ["Amin", "Hasan", "Farhan"];
+	clients.forEach(function(client,serial){
+		console.log(client+"'s serial number is "+serial);
+	});
+&lt;/script&gt;
+</pre>
+
+
+
+</code>
+
+<hr><hr>
+
+
+
+
+<h3>5. for in loop</h3>
+<code>
+var anObjectOrArray = {key:element,...};<br>
+for( myVariable in anObjectOrArray ) <br>
+{<br>
+&nbsp;&nbsp;//some code; <br>
+}<br>
+
+<hr>
+
+<pre>
+&lt;script&gt;
+	var fruits = {a:"apple", b:"berry", c:"cherry"};
+	for(var letter in fruits)
+	{
+		console.log(letter+' for '+fruits[letter]);
+	}
+&lt;/script&gt;
+</pre>
+
+
+
+</code>
+
+<hr><hr>
+
+
+
+
+
+
+
+
+
+
+<br><br><br><br><br>
+
+
+
+
+
+
+
+
+
+
+<script>
+	var fruits = {a:"apple", b:"berry", c:"cherry"};
+	for(var letter in fruits){
+		console.log(letter+' for '+fruits[letter]);
+	}
+</script>
+
+
+
+
+
+</body>
+</html>

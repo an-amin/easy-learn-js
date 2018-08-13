@@ -1,0 +1,173 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>JS: Number Functions</title>
+	<link rel="shortcut icon" href="../__/img/js.png" />
+	<link rel="stylesheet" href="../__/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="../__/prism/prism.css" />
+	<link rel="stylesheet" href="../__/css/style.css" />
+</head>
+<body>
+
+
+<div class="container">
+
+	<h1><i>JavaScript</i> Number Functions/Methods</h1>
+
+	<section>
+		<hr>
+		<h2>Number is object</h2>
+		<hr>
+		<p>
+			<i>JavaScript</i> number is a object and it has own property and methods. <br>
+			to access it's property & methods <code>Number.property</code> & <code>Number.method()</code>
+		</p>
+		
+		<h4>toString() method</h4>
+		<p><code>toString()</code> returns a number as a string</p>
+		<p>All number methods can be used on any type of numbers (literals, variables, or expressions):</p>
+<div class="row IDE">
+<xmp>
+<script>
+	var x = 123;
+	document.write('value of x is ',x,' & type of x is ',typeof x,'<br>');
+	var y = x.toString();
+	document.write('value of y is ',y,' & type of y is ',typeof y,'<br>');
+	
+</script>
+</xmp>
+<pre class="PRISM line-numbers"><code class="language-html language-js"></code></pre>
+<div class="row-fluid console"></div>
+</div>
+
+		
+		<h3>toFixed() method</h3>
+		<p><code>toFixed()</code> returns a string, with the number written with a specified number of decimals:</p>
+<div class="row IDE">
+<xmp>
+<script>
+	var x = 9.656;
+	x.toFixed(0); // returns 10
+	x.toFixed(2); // returns 9.66
+	x.toFixed(4); // returns 9.6560
+	x.toFixed(6); // returns 9.656000
+</script>
+</xmp>
+<pre class="PRISM line-numbers"><code class="language-html language-js"></code></pre>
+<div class="row-fluid console"></div>
+</div>
+
+
+		
+		<h4>toFixed() method</h4>
+		<p><code>toPrecision()</code> returns a string, with a number written with a specified length:</p>
+<div class="row IDE">
+<xmp>
+<script>
+	var x = 9.656;
+	x.toPrecision(); // returns 9.656
+	x.toPrecision(2); // returns 9.7
+	x.toPrecision(4); // returns 9.656
+	x.toPrecision(6); // returns 9.65600
+</script>
+</xmp>
+<pre class="PRISM line-numbers"><code class="language-html language-js"></code></pre>
+<div class="row-fluid console"></div>
+</div>
+
+
+		
+		<h3>Converting Variables to Numbers</h3>
+		<p>There are 3 JavaScript methods that can be used to convert variables to numbers. These methods are not number methods, but global JavaScript methods.</p>
+		<ul>
+			<li>Number() method</li>
+			<li>parseInt() method</li>
+			<li>parseFloat() method</li>
+		</ul>
+
+		<h3>Number() Method</h3>
+		<p><code>Number()</code> can be used to convert <i>JavaScript</i> variables to numbers:</p>
+<div class="row IDE">
+<xmp>
+<script>
+	Number(1);//returns 1
+	Number('1');//returns 1
+	Number('1 1');//returns NaN
+</script>
+</xmp>
+<pre class="PRISM line-numbers"><code class="language-html language-js"></code></pre>
+<div class="row-fluid console"></div>
+</div>
+
+
+	
+		<h3>parseInt() method</h3>
+		<p>parseInt() parses a string and returns a whole number. Spaces are allowed. Only the first number is returned:</p>
+<div class="row IDE">
+<xmp>
+<script>
+	parseInt("3"); //returns 3
+	parseInt("3.25"); //returns 3
+	parseInt("3 2 1 0"); //returns 3
+	parseInt("3 idiots"); //returns 3
+	parseInt("the 3 idiots"); //returns NaN
+</script>
+</xmp>
+<pre class="PRISM line-numbers"><code class="language-html language-js"></code></pre>
+<div class="row-fluid console"></div>
+</div>
+
+	
+		<h3> method</h3>
+		<p></p>
+<div class="row IDE">
+<xmp>
+<script>
+	//
+</script>
+</xmp>
+<pre class="PRISM line-numbers"><code class="language-html language-js"></code></pre>
+<div class="row-fluid console"></div>
+</div>
+
+
+	</section>
+	
+</div> <!--.container-->
+
+
+<footer class="container">
+	<nav></nav>
+</footer>
+	
+
+
+<script src="../__/js/jquery.min.js"></script>
+<script src="../__/js/bootstrap.min.js"></script>
+
+<script>
+$(document).ready(function(){
+
+	$navs = {
+		previous:{
+			title:'Number Reference',
+			href:'09A.number_ref.html'
+		},
+		next:{
+			title:'String Reference',
+			href:'09C.string_ref.html'
+		},
+		index:'09B'
+	};
+	
+});
+</script>
+
+<script src="../__/js/script.js"></script>
+<script src="../__/prism/prism.js"></script>
+
+</body>
+</html>
+</body>
+</html>

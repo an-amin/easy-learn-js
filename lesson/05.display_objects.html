@@ -1,0 +1,201 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>JS Display Objects</title>
+	<link rel="shortcut icon" href="../__/img/js.png" />
+	<link rel="stylesheet" href="../__/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="../__/prism/prism.css" />
+	<link rel="stylesheet" href="../__/css/style.css" />
+</head>
+<body>
+
+
+
+
+<div class="container">
+	
+	<section>
+		<hr>
+		<h2>How to display something in <i>JavaScript</i></h2>
+		<hr>
+		<ol>
+			<li>Writing into an HTML element, using <code>.innerHTML</code></li>
+			<li>Writing into the HTML document using <code>document.write()</code></li>
+			<li>Writing into an alert box, using <code>window.alert()</code></li>
+			<li>Writing into the browser console, using <code>console.log()</code></li>
+		</ol>
+	</section>
+	
+	
+	<section> 
+		<hr>
+		<h3>Writing into an HTML element, using <code>.innerHTML</code></h3>
+		<hr>
+		<p></p>
+<div class="row IDE">
+<div class="col-sm-12 console"></div>
+<xmp>
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>.innerHTML</title>
+</head>
+<body>
+	<h1>.innerHTML</h1>
+	<p id="demo"></p>
+	<p class="demo"></p>
+	<p class="demo"></p>
+	<p class="demo"></p>
+
+	<script>
+		// get Elements By Id
+		document.getElementById("demo").innerHTML = "Inner HTML of Id is changed";
+
+		// get Elements By ClassName
+		var x = document.getElementsByClassName("demo");
+		x[0].innerHTML = "Inner HTML of First Demo Changed ";
+		x[1].innerHTML = "Inner HTML of Second  Demo Changed ";
+	</script>
+
+</body>
+</html>
+</xmp>
+<pre class="PRISM line-numbers"><code class="language-html language-js"></code></pre>
+</div>
+	</section>
+	
+		
+	
+	<section> 
+		<hr>
+		<h3>Writing into the HTML document using <code>document.write()</code></h3>
+		<hr>
+		<p></p>
+<div class="row IDE">
+<div class="col-sm-12 console"></div>
+<xmp>
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>document.write()</title>
+</head>
+<body>
+	
+	<h2>document.write()</h2>
+	<p></p>
+	
+	<script>
+		document.write('Hello world. <br> ');
+		document.write('Writing with document.write() <br> ');
+	</script>
+	
+</body>
+</html>
+</xmp>
+<pre class="PRISM line-numbers"><code class="language-html language-js"></code></pre>
+</div>
+	</section>
+	
+		
+	
+	<section> 
+		<hr>
+		<h3>Writing into an alert box, using <code>window.alert()</code></h3>
+		<hr>
+		<p></p>
+<div class="row IDE">
+<div class="col-sm-12 console"></div>
+<xmp>
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>window.alert()</title>
+</head>
+<body>
+	
+	<h2>window.alert()</h2>
+	
+	<script>
+		window.alert("Don't worry, this is a simple alert!");
+	</script>
+	
+</body>
+</html>
+</xmp>
+<pre class="PRISM line-numbers"><code class="language-html language-js"></code></pre>
+</div>
+	</section>
+	
+		
+	
+	<section> 
+		<hr>
+		<h3>Writing into the browser console, using <code>console.log()</code></h3>
+		<hr>
+		<p></p>
+<div class="row IDE">
+<div class="col-sm-12 console"></div>
+<xmp>
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>console.log()</title>
+</head>
+<body>
+	<h2>console.log()</h2>
+	<p>Press <b>F12</b> to Open Browser Console</p>
+	
+	<script>
+		console.log("Hello from Browser Console.");
+		console.log("Welcome once again.");
+		console.log("please type '2+3' & press ENTER.");
+	</script>
+</body>
+</html>
+</xmp>
+<pre class="PRISM line-numbers"><code class="language-html language-js"></code></pre>
+</div>
+	</section>
+			
+	
+	
+</div> <!--.container-->
+
+
+<footer class="container">
+	<nav></nav>
+</footer>
+	
+
+
+<script src="../__/js/jquery.min.js"></script>
+<script src="../__/js/bootstrap.min.js"></script>
+
+<script>
+$(document).ready(function(){
+
+	$navs = {
+		previous:{
+			title:'Syntax',
+			href:'04.syntax.html'
+		},
+		next:{
+			title:'Comments',
+			href:'06.comments.html'
+		},
+		index:'05'
+	};
+	
+});
+</script>
+
+<script src="../__/js/script.js"></script>
+<script src="../__/prism/prism.js"></script>
+
+</body>
+</html>
